@@ -88,6 +88,7 @@ header{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             padding: $space-2 $space-6;
             cursor: pointer;
+            transition: all $transition-normal;
         }
     }
 }
