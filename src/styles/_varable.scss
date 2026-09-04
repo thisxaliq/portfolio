@@ -1,6 +1,90 @@
-$bg-white: white;
-$text-white: black;
 
-$bg-black: black;
-$text-black: white;
+/* DEFAULT COLOR */
 
+$black: #000;
+$white: #fff;
+
+$bg-black: $black;
+$bg-white: $white;
+
+$text-black: $white;
+$text-white: $black;
+
+$bg-secondary-black: #181818;
+$bg-secondary-white: #f7f7f7;
+
+$text-secondary-black: #b3b3b3;
+$text-secondary-white: #4a4a4a;
+
+$border-black: #292929;
+$border-white: #dedede;
+
+/* CSS Optim... */
+
+:root {
+    --bg: #{$bg-black};
+    --bg-secondary: #{$bg-secondary-black};
+    --text: #{$text-black};
+    --text-secondary: #{$text-secondary-black};
+
+    --border: #{$border-black};
+}
+
+html[data-theme="light"] {
+    --bg: #{$bg-white};
+    --bg-secondary: #{$bg-secondary-white};
+
+    --text: #{$text-white};
+    --text-secondary: #{$text-secondary-white};
+
+    --border: #{$border-white};
+}
+
+/* scss use*/
+
+$bg: var(--bg);
+$bg-secondary: var(--bg-secondary);
+
+$text: var(--text);
+$text-secondary: var(--text-secondary);
+
+$border: var(--border);
+
+
+$font-primary: "Inter", sans-serif;
+$font-mono: "JetBrains Mono", monospace;
+
+$font-xs: 0.75rem;
+$font-sm: 0.875rem;
+$font-md: 1rem;
+$font-lg: 1.125rem;
+$font-xl: 1.25rem;
+$font-2xl: 1.5rem;
+$font-3xl: 2rem;
+$font-4xl: 3rem;
+
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+$line-tight: 1.1;
+$line-normal: 1.5;
+$line-relaxed: 1.7;
+
+
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-12: 3rem;
+$space-16: 4rem;
+$space-24: 6rem;
+
+
+
+$transition-fast: .1s ease;
+$transition-normal: .3s ease;
+$transition-slow: .5s ease;

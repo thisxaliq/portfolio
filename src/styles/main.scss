@@ -1,6 +1,6 @@
-@import "./global";
-@import "./header";
+// @import "./global";
 @import "./_varable";
+@import "./header";
 *{
     margin: 0;
     padding: 0;
@@ -11,19 +11,9 @@ ul{
     list-style: none;
     display: flex;
 }
+
+/* sora silinecek */
+
 #hero, footer{
     display: none;
-}
-html[data-theme="light"] {
-    body{
-        background-color: $bg-white;
-        color: $text-white;
-    }
-}
-
-html[data-theme="dark"] {
-    body{
-        background-color: $bg-black;
-        color: $text-black;
-    }
 }

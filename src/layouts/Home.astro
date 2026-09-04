@@ -24,7 +24,6 @@ function getTheme(){
 <!doctype html>
 <html data-theme="" lang={getlang}>
 	<head>
-		<script is:inline src="/src/theme.js"></script>
 		<BaseHead title={lang.hero.title} description={lang.hero.sub} />
 	</head>
 	<BaseLayout lang={lang}>
@@ -32,4 +31,5 @@ function getTheme(){
 		<br>
 		<About lang={lang} />
 	</BaseLayout>
+	<script is:inline src="/src/theme.js"></script>
 </html>
