@@ -13,19 +13,18 @@ const language = lang.lang
 	<div class="container header">
 		<a class="menuIcon" href="/">{icon}</a>
 		<nav class="mainNav" aria-label="Main navigation">
-			<ul>
+			<ul class="flex">
 				{Object.entries(navItems).map(([key, item]) => (
 					<li><a href={`#${key}`}>{item}</a></li>
 				))}
 			</ul>
 		</nav>
 		<nav class="langNav" aria-label="Language navigation">
-			<ul>
+			<ul class="flex">
 				{langs.map((l) => (<li class={language === l ? "isselect" : ""} ><a  href={`/${l}/`}>{l.toUpperCase()}</a></li>))}
 			</ul>
 		</nav>
-		<div class="button">
-			<button data-themebutton onclick="changeThem()">MODE</button>
-		</div>
+		<button data-themebutton onclick="changeThem()">MODE</button>
+		
 	</div>
 </header>

@@ -1,43 +1,46 @@
 header{
     
     .header{
-        box-shadow: 0 2px 8px rgba(var(--black), 5%);
-        padding: 0 3rem;
         display: grid;
         grid-template-columns: auto 1fr auto auto;
         align-items: center;
+        padding: 0 $space-12;
+        box-shadow: $section-shadow;
         .menuIcon{
-            font-size: 1.5rem;
-            color: rgb(0, 0, 0);
+            color: $text;
+            font-family: serif;
+            font-size: $font-2xl;
+            font-weight: $weight-bold-ultra;
+            transition: all $transition-normal;
             cursor: pointer;
-            font-weight: 900;
-            transition: all 0.4s;
             &:hover{
-                scale: 1.1;
+                scale: $scale-normal;
             }
         }
         .mainNav{
             margin: auto;
             ul{
-                gap: 2rem;
+                gap: $space-8;
                 li{
-                    padding: 1rem 0;
+                    padding: $space-4 0;
                     a{
-                        color: black;
-                        text-decoration: none;
-                        transition: all 0.4s;
-                        font-size: 1.3rem;
+                        display: inline-block;
+                        color: $text;
+                        font-size: $font-xl;
+                        transition: $transition-normal;
+                        width: 100%;
                         &::after{
                             content: "";
                             display: block;
                             margin: auto;
                             width: 0%;
-                            height: 2px;
-                            background: black;
-                            transition: all 0.4s;
+                            height: 1px;
+                            background: $text;
+                            transition: $transition-normal;
                         }
                         &:hover{
-                            scale: 1.1;
+                            scale: $scale-low;
+                            color: $text-secondary;
                             &::after{
                                 width: 100%;
                             }
@@ -47,37 +50,44 @@ header{
             }
         }
         .langNav{
-            margin: auto;
-            margin-right: 2rem;
-            border: 1px solid rgb(242, 237, 228);
-            background-color: rgba(255, 255, 255, 0.548);
-            border-radius: 50px;
+            background-color: $shadow-color;
+            border: 1px solid $border;
+            border-radius: 1rem;
+            margin-right: $space-8;
             ul{
-                gap: 1rem;
+                gap: $space-3;
                 li{
-                    padding: 0.5rem 0.7rem;
-                    border-radius: 100%;
+                    border-radius: 50%;
                     font-size: small;
-                    transition: all .3s;
+                    transition: $transition-normal;
                     a{
-                        transition: all .3s;
+                        display: inline-block;
+                        width: 100%;
+                        padding: 0.5rem 0.7rem;
+                        transition: all $transition-normal;
                         color: inherit;
                     }
                     &.isselect{
-                        background-color: rgba(4, 4, 4, 0.322);
+                        background-color: $bg;
                     }
                     &:hover{
-                        background-color: rgba(4, 4, 4, 0.322);
+                        background-color: $bg-secondary;
                         a{
-                            scale: 1.1;
+                            scale: $scale-low;
                         }
                     }
                 }
             }
         }
-    }
-    a{
-        color: black;
-        text-decoration: none;
+        button{
+            background: none;
+            border: none;
+            color: $text;
+            background-color: $shadow-color;
+            border-radius: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: $space-2 $space-6;
+            cursor: pointer;
+        }
     }
 }

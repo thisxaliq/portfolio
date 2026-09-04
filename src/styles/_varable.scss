@@ -19,6 +19,10 @@ $text-secondary-white: #4a4a4a;
 $border-black: #292929;
 $border-white: #dedede;
 
+$shadow-black: #0000001a;
+$shadow-white: #ffffff1a;
+
+
 /* CSS Optim... */
 
 :root {
@@ -26,30 +30,30 @@ $border-white: #dedede;
     --bg-secondary: #{$bg-secondary-black};
     --text: #{$text-black};
     --text-secondary: #{$text-secondary-black};
+    --shadow: #{$shadow-white};
+    --border: #{$border-white};
 
-    --border: #{$border-black};
 }
 
 html[data-theme="light"] {
     --bg: #{$bg-white};
     --bg-secondary: #{$bg-secondary-white};
-
     --text: #{$text-white};
     --text-secondary: #{$text-secondary-white};
-
-    --border: #{$border-white};
+    --shadow: #{$shadow-black};
+    --border: #{$border-black};
 }
 
 /* scss use*/
 
 $bg: var(--bg);
 $bg-secondary: var(--bg-secondary);
-
+$shadow-color: var(--shadow);
 $text: var(--text);
 $text-secondary: var(--text-secondary);
 
 $border: var(--border);
-
+$section-shadow: 0 2px 80px 5px $shadow-color;
 
 $font-primary: "Inter", sans-serif;
 $font-mono: "JetBrains Mono", monospace;
@@ -67,11 +71,15 @@ $weight-regular: 400;
 $weight-medium: 500;
 $weight-semibold: 600;
 $weight-bold: 700;
+$weight-bold-ultra: 900;
 
 $line-tight: 1.1;
 $line-normal: 1.5;
 $line-relaxed: 1.7;
 
+$scale-low: 1.1;
+$scale-normal: 1.25;
+$scale-absurt: 1.5;
 
 $space-1: 0.25rem;
 $space-2: 0.5rem;
