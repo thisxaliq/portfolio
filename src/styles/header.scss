@@ -1,0 +1,82 @@
+header{
+    background: white;
+    .header{
+        box-shadow: 0 2px 8px rgba(var(--black), 5%);
+        padding: 0 3rem;
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        align-items: center;
+        .menuIcon{
+            font-size: 1.5rem;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            font-weight: 900;
+            transition: all 0.4s;
+            &:hover{
+                scale: 1.1;
+            }
+        }
+        .mainNav{
+            margin: auto;
+            ul{
+                gap: 2rem;
+                li{
+                    padding: 1rem 0;
+                    a{
+                        color: black;
+                        text-decoration: none;
+                        transition: all 0.4s;
+                        &::after{
+                            content: "";
+                            display: block;
+                            margin: auto;
+                            width: 0%;
+                            height: 2px;
+                            background: black;
+                            transition: all 0.4s;
+                        }
+                        &:hover{
+                            scale: 1.1;
+                            &::after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .langNav{
+            margin: auto;
+            margin-right: 2rem;
+            border: 1px solid rgb(242, 237, 228);
+            background-color: rgba(255, 255, 255, 0.548);
+            border-radius: 50px;
+            ul{
+                gap: 1rem;
+                li{
+                    padding: 0.5rem 0.7rem;
+                    border-radius: 100%;
+                    font-size: small;
+                    transition: all .3s;
+                    a{
+                        transition: all .3s;
+                        color: inherit;
+                    }
+                    &.isselect{
+                        background-color: rgba(4, 4, 4, 0.322);
+                    }
+                    &:hover{
+                        background-color: rgba(4, 4, 4, 0.322);
+                        a{
+                            scale: 1.1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}

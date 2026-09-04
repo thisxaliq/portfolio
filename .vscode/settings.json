@@ -1,0 +1,18 @@
+{
+    "customFileOrder.rules": {
+        ".": {
+            "order": [
+                "public",
+                "src",
+                "AGENTS.md",
+                "astro.config.mjs",
+                "README.md",
+                ".vscode",
+                "tsconfig.json",
+                "package-lock.json",
+                "package.json",
+                ".gitignore"
+            ]
+        }
+    }
+}

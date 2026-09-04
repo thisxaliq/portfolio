@@ -1,0 +1,14 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const { lang } = Astro.props;
+
+---
+<body>
+    <Header lang={lang} />
+    <slot />
+    <Footer lang={lang} />
+</body>
+
+

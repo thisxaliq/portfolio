@@ -1,0 +1,19 @@
+---
+
+
+const {lang} = Astro.props;
+
+---
+
+<section id="hero">
+    <!-- <p>Salam, mən Abdulxaliq.</p>
+    <h1>Front-end &amp; Game Developer</h1>
+    <p>React, JavaScript, SCSS və Godot ilə işləyirəm.</p>
+    <div>
+        <a href="#projects">Layihələrimə bax</a>
+        <a href="#contact">Mənimlə əlaqə</a>
+    </div> -->
+
+    {Object.entries(lang.hero).map(([key, value]) => (<h2>{key}: {value}</h2>))}
+
+</section>

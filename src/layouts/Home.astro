@@ -1,0 +1,35 @@
+---
+import { getLangCfg } from "../consts";
+
+import BaseHead from '../layouts/BaseHead.astro';
+import BaseLayout from './BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+
+const { getlang } = Astro.props;
+const lang = getLangCfg(getlang); 
+function getTheme(){
+	const savedTheme = localStorage.getItem("theme");
+	if (savedTheme) {
+		return savedTheme;
+	} else {
+		localStorage.setItem("theme", "dark");
+		return "dark";
+	}
+}
+
+
+---
+
+<!doctype html>
+<html data-theme="" lang={getlang}>
+	<head>
+		<script is:inline src="/src/theme.js"></script>
+		<BaseHead title={lang.hero.title} description={lang.hero.sub} />
+	</head>
+	<BaseLayout lang={lang}>
+		<Hero lang={lang} />
+		<br>
+		<About lang={lang} />
+	</BaseLayout>
+</html>

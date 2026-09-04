@@ -1,0 +1,29 @@
+@import "./global";
+@import "./header";
+@import "./_varable";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+}
+#hero, footer{
+    display: none;
+}
+html[data-theme="light"] {
+    body{
+        background-color: $bg-white;
+        color: $text-white;
+    }
+}
+
+html[data-theme="dark"] {
+    body{
+        background-color: $bg-black;
+        color: $text-black;
+    }
+}

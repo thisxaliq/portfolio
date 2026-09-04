@@ -1,5 +1,16 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
+import config from './json/config.json'; 
+import site from './json/site.json';
 
-export const SITE_TITLE = 'Astro Blog';
-export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const defaultLanguage = config.defaultLanguage;
+export const langs = config.langs;
+export const sitecfg = site;
+
+
+
+export function getLangCfg(lang: string) {
+  if (config.langs.includes(lang)) {
+    return config[lang];
+  }else {
+    return config[defaultLanguage];
+  }
+}
